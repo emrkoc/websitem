@@ -1,12 +1,22 @@
 /* ============ AYARLAR ============ */
-const WHATSAPP_NUMBER = '905528173422'; // Başında + olmadan, ülke koduyla
-const WHATSAPP_TEXT = 'Merhaba, web sitesi için teklif almak istiyorum.';
-const PHONE_DISPLAY = '+90 552 817 3422'; // Ekranda görünen telefon
+const WHATSAPP_NUMBER = '905528173422';
+const PHONE_DISPLAY = '+90 552 817 3422';
 const EMAIL = 'merhaba@pixelatolye.com';
 const INSTAGRAM_HANDLE = '@pixelatolye';
 const INSTAGRAM_URL = 'https://instagram.com/pixelatolye';
 
-/* ============ PROJE VERİLERİ & MOCKUP ============ */
+// Sayfaya göre otomatik WhatsApp mesajı belirleme
+let waText = 'Merhaba, web sitesi için teklif almak istiyorum.';
+const path = window.location.pathname.toLowerCase();
+if (path.includes('e-ticaret')) {
+  waText = 'Merhaba, e-ticaret web sitesi için teklif almak istiyorum.';
+} else if (path.includes('kurumsal')) {
+  waText = 'Merhaba, kurumsal web tasarım için teklif almak istiyorum.';
+} else if (path.includes('bakim')) {
+  waText = 'Merhaba, web sitesi bakım ve destek hizmeti hakkında bilgi almak istiyorum.';
+}
+
+/* ============ PROJE VERİLERİ (ANA SAYFA) ============ */
 function mockup(c1, c2, label) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
     <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
@@ -38,7 +48,7 @@ const projects = [
     title: 'Peyzaj & Bahçe Hizmetleri Portföyü',
     category: 'Hizmet & Portföy',
     description: 'Önce-sonra galerileri ve hizmet bölgelerini öne çıkaran, görsel ağırlıklı ama hafif kalan bir portföy sitesi.',
-    image: mockup('#f59e0b', '#b45309', 'Peyzaj & Bahçe Hizmetleri'),
+    image: 'images/ustaellerbahce.com_.png',
     tags: ['Galeri', 'Hızlı Yükleme', 'Teklif Formu'],
     liveUrl: 'https://ustaellerbahce.com/'
   },
@@ -52,14 +62,14 @@ const projects = [
   }
 ];
 
-/* ============ YARDIMCILAR & STATİK ALANLAR ============ */
+/* ============ YARDIMCILAR & BAĞLANTILAR ============ */
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // WhatsApp bağlantıları
-const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
+const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
 document.querySelectorAll('[data-wa]').forEach(a => a.href = waHref);
 
-// Telefon / e-posta / Instagram bağlantıları
+// İletişim bilgileri
 document.querySelectorAll('[data-phone-link]').forEach(a => a.href = `tel:+${WHATSAPP_NUMBER}`);
 document.querySelectorAll('[data-phone-text]').forEach(el => el.textContent = PHONE_DISPLAY);
 document.querySelectorAll('[data-mail-link]').forEach(a => a.href = `mailto:${EMAIL}`);
@@ -67,17 +77,44 @@ document.querySelectorAll('[data-mail-text]').forEach(el => el.textContent = EMA
 document.querySelectorAll('[data-ig-link]').forEach(a => a.href = INSTAGRAM_URL);
 document.querySelectorAll('[data-ig-text]').forEach(el => el.textContent = INSTAGRAM_HANDLE);
 
-// Görsel hata kontrolü
+// Hakkımda görsel hata kontrolü
 const aboutImg = document.getElementById('about-img');
 if (aboutImg) {
   aboutImg.addEventListener('error', () => { aboutImg.src = mockup('#f59e0b', '#92400e', 'Çalışma Alanı'); }, { once: true });
 }
 
-// Yıl bilgisi
+// Yıl
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+/* ============ GÖRSEL YER TUTUCULARI (ALT SAYFALAR İÇİN) ============ */
+function placeholder(label, c1, c2) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
+    <rect width="800" height="500" fill="#0f1117"/>
+    <rect x="40" y="40" width="720" height="420" rx="28" fill="url(#g)" fill-opacity=".22" stroke="#ffffff" stroke-opacity=".12"/>
+    <rect x="70" y="72" width="130" height="14" rx="7" fill="#fff" fill-opacity=".25"/>
+    <rect x="70" y="104" width="300" height="26" rx="13" fill="#fff" fill-opacity=".5"/>
+    <rect x="70" y="146" width="220" height="12" rx="6" fill="#fff" fill-opacity=".25"/>
+    <rect x="70" y="330" width="200" height="100" rx="16" fill="#fff" fill-opacity=".07"/>
+    <rect x="290" y="330" width="200" height="100" rx="16" fill="#fff" fill-opacity=".07"/>
+    <rect x="510" y="330" width="220" height="100" rx="16" fill="#fff" fill-opacity=".07"/>
+    <g transform="translate(400 250)" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-34" y="-30" width="68" height="60" rx="12"/><circle cx="-12" cy="-10" r="7"/><path d="M34 14l-18-18-30 34"/>
+    </g>
+    <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff" fill-opacity=".85">${label}</text>
+    <text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#fff" fill-opacity=".45">Görsel alanı - kendi görselinizi ekleyin</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+document.querySelectorAll('img[data-ph]').forEach(img => {
+  if (img.getAttribute('src')) return;
+  const [label, c1, c2] = img.dataset.ph.split('|');
+  img.src = placeholder(label, c1, c2);
+});
 
 /* ============ PROJELERİ LİSTELEME ============ */
 const grid = document.getElementById('projects-grid');
@@ -178,7 +215,7 @@ items.forEach(item => {
   });
 });
 
-/* ============ FORMSPREE AJAX GÖNDERİMİ ============ */
+/* ============ FORMSPREE AJAX GÖNDERİMİ (ANA SAYFA) ============ */
 const form = document.getElementById('quote-form');
 const statusEl = document.getElementById('form-status');
 const submitBtn = document.getElementById('form-btn');
@@ -221,23 +258,14 @@ if (form && statusEl && submitBtn) {
 
 /* ============ TELEFON ALANI FORMATLAMA & SINIRLAMA ============ */
 const phoneInput = document.getElementById('phone');
-
 if (phoneInput) {
   phoneInput.addEventListener('focus', () => {
-    if (!phoneInput.value.trim()) {
-      phoneInput.value = '0';
-    }
+    if (!phoneInput.value.trim()) phoneInput.value = '0';
   });
-
   phoneInput.addEventListener('input', (e) => {
     let numbers = e.target.value.replace(/\D/g, '');
-
-    if (numbers.length > 0 && !numbers.startsWith('0')) {
-      numbers = '0' + numbers;
-    }
-
+    if (numbers.length > 0 && !numbers.startsWith('0')) numbers = '0' + numbers;
     numbers = numbers.slice(0, 11);
-
     let formatted = '';
     if (numbers.length > 0) {
       formatted = numbers.substring(0, 4);
@@ -245,19 +273,12 @@ if (phoneInput) {
       if (numbers.length > 7) formatted += ' ' + numbers.substring(7, 9);
       if (numbers.length > 9) formatted += ' ' + numbers.substring(9, 11);
     }
-
     e.target.value = formatted;
   });
-
   phoneInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Backspace' && phoneInput.value === '0') {
-      phoneInput.value = '';
-    }
+    if (e.key === 'Backspace' && phoneInput.value === '0') phoneInput.value = '';
   });
-
   phoneInput.addEventListener('blur', () => {
-    if (phoneInput.value.trim() === '0') {
-      phoneInput.value = '';
-    }
+    if (phoneInput.value.trim() === '0') phoneInput.value = '';
   });
 }
