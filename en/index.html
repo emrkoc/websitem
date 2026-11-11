@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixel Atölye | Custom-Coded Websites Built for Your Business</title>
+  <meta name="description"
+    content="Custom-built from scratch for local businesses and professionals: lightweight, SEO-friendly, and ultra-fast loading websites." />
+  <meta name="theme-color" content="#090a0f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'] },
+          colors: { ink: '#090a0f' }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-ink text-zinc-300 antialiased selection:bg-amber-400/30 selection:text-white">
+
+  <!-- Background layers -->
+  <div id="glow-a" class="bg-layer"></div>
+  <div id="glow-b" class="bg-layer"></div>
+  <div id="dotgrid" class="bg-layer" style="inset:-200px 0 -200px 0;"></div>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-zinc-950/70 border-b border-white/10">
+    <div class="w-full px-6 sm:px-10 lg:px-20 h-20 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-3 font-extrabold text-white tracking-tight text-xl sm:text-2xl">
+        <span
+          class="grid place-items-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-400 text-zinc-950 text-lg sm:text-xl font-extrabold">P</span>
+        Pixel Atölye
+      </a>
+
+      <nav class="hidden md:flex items-center gap-0.5 lg:gap-1" aria-label="Main menu">
+        <!-- Services dropdown -->
+        <div class="relative group">
+          <a href="#services"
+            class="inline-flex items-center gap-1.5 px-3 lg:px-4 py-2.5 rounded-full text-[15px] lg:text-base font-semibold text-zinc-300 hover:text-white hover:bg-white/5 transition"
+            aria-haspopup="true">
+            Services <svg
+              class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180"
+              fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-80 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-300">
+            <div
+              class="rounded-2xl border border-white/10 bg-zinc-950/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/60">
+              <a href="corporate-web-design.html"
+                class="flex items-start gap-3 rounded-xl p-3 hover:bg-white/5 transition">
+                <span
+                  class="grid place-items-center w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 text-indigo-400"><svg
+                    class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="14" rx="2.5" />
+                    <path d="M8 21h8M12 18v3" />
+                  </svg></span>
+                <span class="leading-snug"><span class="block text-sm font-bold text-white">Corporate Web
+                    Design</span><span class="block text-xs text-zinc-400 mt-0.5">Custom, high-speed corporate
+                    websites</span></span>
+              </a>
+              <a href="ecommerce-website.html"
+                class="flex items-start gap-3 rounded-xl p-3 hover:bg-white/5 transition">
+                <span
+                  class="grid place-items-center w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 text-indigo-400"><svg
+                    class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M3 4h2l2.2 11h11.2L20 7H6.2" />
+                    <circle cx="9" cy="20" r="1.5" />
+                    <circle cx="17" cy="20" r="1.5" />
+                  </svg></span>
+                <span class="leading-snug"><span class="block text-sm font-bold text-white">E-Commerce
+                    Websites</span><span class="block text-xs text-zinc-400 mt-0.5">Secure, manageable online
+                    stores</span></span>
+              </a>
+              <a href="website-maintenance-support.html"
+                class="flex items-start gap-3 rounded-xl p-3 hover:bg-white/5 transition">
+                <span
+                  class="grid place-items-center w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 text-indigo-400"><svg
+                    class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path
+                      d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z" />
+                  </svg></span>
+                <span class="leading-snug"><span class="block text-sm font-bold text-white">Maintenance &amp;
+                    Support</span><span class="block text-xs text-zinc-400 mt-0.5">Updates, backups, ongoing
+                    support</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#projects"
+          class="px-3 lg:px-4 py-2.5 rounded-full text-[15px] lg:text-base font-semibold text-zinc-300 hover:text-white hover:bg-white/5 transition">Projects</a>
+        <a href="#process"
+          class="px-3 lg:px-4 py-2.5 rounded-full text-[15px] lg:text-base font-semibold text-zinc-300 hover:text-white hover:bg-white/5 transition">Process</a>
+        <a href="#faq"
+          class="px-3 lg:px-4 py-2.5 rounded-full text-[15px] lg:text-base font-semibold text-zinc-300 hover:text-white hover:bg-white/5 transition">FAQ</a>
+        <a href="#contact"
+          class="px-3 lg:px-4 py-2.5 rounded-full text-[15px] lg:text-base font-semibold text-zinc-300 hover:text-white hover:bg-white/5 transition">Contact</a>
+      </nav>
+
+      <!-- Right: Language Toggle & Mobile Menu Button -->
+      <div class="flex items-center gap-3 lg:w-[210px] lg:justify-end">
+        <!-- TR / EN Toggle Switch (EN is active) -->
+        <a href="../index.html" 
+           id="lang-toggle-link"
+           title="Türkçe sayfaya geç"
+           class="relative inline-flex items-center bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 rounded-full p-1 cursor-pointer select-none transition-colors duration-300">
+          <!-- Amber indicator resting on EN (translate-x-9) -->
+          <span id="lang-indicator" 
+                class="absolute left-1 top-1 w-9 h-7 rounded-full bg-amber-400 shadow-md shadow-amber-500/30 transition-transform duration-300 ease-out translate-x-9"></span>
+          <!-- TR text -->
+          <span id="lang-text-tr" 
+                class="relative z-10 w-9 h-7 flex items-center justify-center text-xs font-bold text-zinc-400 hover:text-white transition-colors duration-300">
+            TR
+          </span>
+          <!-- EN text -->
+          <span id="lang-text-en" 
+                class="relative z-10 w-9 h-7 flex items-center justify-center text-xs font-black text-zinc-950 transition-colors duration-300">
+            EN
+          </span>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden grid place-items-center w-11 h-11 rounded-xl border border-white/10 bg-white/5 text-white">
+          <svg id="ico-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            viewBox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="ico-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden border-t border-white/10">
+      <div class="px-5 py-4 flex flex-col gap-1 font-semibold">
+        <a href="#services"
+          class="m-link px-4 py-3.5 rounded-xl hover:bg-white/5 text-zinc-100 text-base">Services</a>
+        <a href="corporate-web-design.html"
+          class="m-link ml-4 pl-3 border-l border-white/10 px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-300 text-[15px] font-medium">Corporate
+          Web Design</a>
+        <a href="ecommerce-website.html"
+          class="m-link ml-4 pl-3 border-l border-white/10 px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-300 text-[15px] font-medium">E-Commerce
+          Websites</a>
+        <a href="website-maintenance-support.html"
+          class="m-link ml-4 pl-3 border-l border-white/10 px-4 py-3 rounded-xl hover:bg-white/5 text-zinc-300 text-[15px] font-medium">Website
+          Maintenance &amp; Support</a>
+        <a href="#projects" class="m-link px-4 py-3.5 rounded-xl hover:bg-white/5 text-zinc-100 text-base">Projects</a>
+        <a href="#process" class="m-link px-4 py-3.5 rounded-xl hover:bg-white/5 text-zinc-100 text-base">Process</a>
+        <a href="#faq" class="m-link px-4 py-3.5 rounded-xl hover:bg-white/5 text-zinc-100 text-base">FAQ</a>
+        <a href="#contact" class="m-link px-4 py-3.5 rounded-xl hover:bg-white/5 text-zinc-100 text-base">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floating WhatsApp Icon (Bottom Right) -->
+  <a id="wa-float" data-wa href="#" target="_blank" rel="noopener" aria-label="Message on WhatsApp"
+    class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[60] grid place-items-center w-14 h-14 rounded-full bg-emerald-500 text-white shadow-xl shadow-emerald-500/30">
+    <span class="wa-ping absolute inset-0 rounded-full bg-emerald-400"></span>
+    <svg class="relative w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.1 6.5 6.5 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z" />
+    </svg>
+  </a>
+
+  <main id="top" class="relative z-10">
+
+    <!-- HERO -->
+    <section class="pt-36 pb-20 sm:pt-44 sm:pb-28">
+      <div class="max-w-5xl mx-auto px-5 text-center">
+        <div
+          class="reveal inline-flex items-center gap-2.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-emerald-300">
+          <span class="live-dot w-2 h-2 rounded-full bg-emerald-400"></span>
+          Available for New Projects
+        </div>
+
+        <h1 class="reveal mt-7 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]"
+          style="--d:80ms">
+          Say Goodbye to Bloated Templates. Get a <span class="text-amber-400">Custom</span> and <span
+            class="text-amber-400">Lightning-Fast</span> Website.
+        </h1>
+
+        <p class="reveal mt-7 max-w-2xl mx-auto text-base sm:text-lg text-zinc-400 leading-relaxed" style="--d:160ms">
+          Tailored for businesses and independent professionals: custom-coded from scratch without heavy page builders,
+          optimized for Google rankings, and built to load instantly on mobile.
+        </p>
+
+        <div class="reveal mt-9 flex flex-col sm:flex-row items-center justify-center gap-3" style="--d:240ms">
+          <a href="#projects"
+            class="w-full sm:w-auto rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold px-7 py-3.5 transition">View
+            Projects</a>
+          <a data-wa href="#" target="_blank" rel="noopener"
+            class="w-full sm:w-auto rounded-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-7 py-3.5 transition shadow-lg shadow-amber-500/20">Get
+            a Quote</a>
+        </div>
+
+        <div class="reveal mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto" style="--d:320ms">
+          <div class="card rounded-2xl p-5">
+            <div class="text-3xl font-extrabold text-white tracking-tight">100%</div>
+            <div class="mt-1 text-sm text-zinc-400">Mobile Responsive</div>
+          </div>
+          <div class="card rounded-2xl p-5">
+            <div class="text-3xl font-extrabold text-white tracking-tight">&lt; 1s</div>
+            <div class="mt-1 text-sm text-zinc-400">Load Time</div>
+          </div>
+          <div class="card rounded-2xl p-5">
+            <div class="text-3xl font-extrabold text-white tracking-tight">100%</div>
+            <div class="mt-1 text-sm font-semibold text-amber-300">SEO Driven</div>
+            <div class="text-xs text-zinc-500">Google &amp; Local Search Ready</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & DIRECT COMMUNICATION -->
+    <section id="about" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <!-- Left: Image -->
+        <div class="reveal relative">
+          <div
+            class="zoom-wrap relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/3] bg-zinc-900 shadow-2xl shadow-black/40">
+            <img id="about-img" class="zoom-img w-full h-full object-cover" loading="lazy"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+              alt="Developer workspace with laptop and code screen" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-zinc-950/50 via-transparent to-transparent pointer-events-none">
+            </div>
+          </div>
+          <div
+            class="absolute left-4 bottom-4 sm:left-6 sm:bottom-6 inline-flex items-center gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 backdrop-blur-md px-4 py-2.5 shadow-xl">
+            <span
+              class="grid place-items-center w-8 h-8 rounded-xl bg-amber-400 text-zinc-950 font-extrabold text-xs">&lt;/&gt;</span>
+            <span class="text-sm font-bold text-white tracking-tight">Web Design &amp; Development</span>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div>
+          <div class="reveal">
+            <span
+              class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">ABOUT
+              &amp; PROCESS</span>
+            <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">Direct
+              Communication Throughout <span class="text-amber-400">The Whole Project</span></h2>
+            <p class="mt-4 text-zinc-400 leading-relaxed">No intermediary agencies, account managers, or cluttered
+              teams. From initial discovery to deployment, you communicate directly with the engineer writing the code.
+              Delivering lightweight, responsive, and SEO-engineered web platforms designed for your specific goals.</p>
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-2 gap-3">
+            <div class="reveal card rounded-2xl p-5" style="--d:0ms">
+              <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-bold text-white tracking-tight">Direct Collaboration</h3>
+              <p class="mt-1 text-sm text-zinc-400">Direct contact with the engineer</p>
+            </div>
+            <div class="reveal card rounded-2xl p-5" style="--d:70ms">
+              <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path
+                    d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-bold text-white tracking-tight">Tailored Solutions</h3>
+              <p class="mt-1 text-sm text-zinc-400">Custom structure over generic themes</p>
+            </div>
+            <div class="reveal card rounded-2xl p-5" style="--d:140ms">
+              <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-bold text-white tracking-tight">Fast Turnaround</h3>
+              <p class="mt-1 text-sm text-zinc-400">Transparent timeline and milestones</p>
+            </div>
+            <div class="reveal card rounded-2xl p-5" style="--d:210ms">
+              <div class="w-10 h-10 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-bold text-white tracking-tight">Modern Architecture</h3>
+              <p class="mt-1 text-sm text-zinc-400">Clean, zero-bloat code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-2xl reveal">
+          <span
+            class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">SERVICES</span>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">The right solution
+            <span class="text-amber-400">for your workflow.</span>
+          </h2>
+          <p class="mt-4 text-zinc-400 leading-relaxed">Three core services coded from scratch, completely free from the
+            burden of pre-made site templates.</p>
+        </div>
+
+        <div class="mt-12 grid lg:grid-cols-3 gap-5">
+          <!-- Corporate -->
+          <article class="reveal card rounded-2xl p-7 flex flex-col" style="--d:0ms">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="14" rx="2.5" />
+                <path d="M8 21h8M12 18v3" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold text-white tracking-tight">Corporate Web Design</h3>
+            <p class="mt-3 text-sm text-zinc-400 leading-relaxed">I build bespoke, responsive, and blazing-fast
+              websites that represent your company with credibility. Architecture and UI crafted to meet your exact
+              business objectives.</p>
+            <ul class="mt-5 space-y-2.5 text-sm text-zinc-300">
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Responsive Layout for All Screens</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Custom UI &amp; Clean Code</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>SEO-Optimized Page Structure</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Fast &amp; Secure Infrastructure</li>
+            </ul>
+            <a href="corporate-web-design.html"
+              class="mt-7 lg:mt-auto pt-2 inline-flex items-center gap-1.5 text-sm font-bold text-amber-400 hover:text-amber-300 transition">
+              Explore Corporate Design
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- E-Commerce -->
+          <article class="reveal card rounded-2xl p-7 flex flex-col" style="--d:90ms">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M3 4h2l2.2 11h11.2L20 7H6.2" />
+                <circle cx="9" cy="20" r="1.5" />
+                <circle cx="17" cy="20" r="1.5" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold text-white tracking-tight">E-Commerce Websites</h3>
+            <p class="mt-3 text-sm text-zinc-400 leading-relaxed">Secure, conversion-driven e-commerce platforms designed
+              to make online purchasing effortless for customers and straightforward for store managers.</p>
+            <ul class="mt-5 space-y-2.5 text-sm text-zinc-300">
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Product &amp; Category Management</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Payment Gateway Integration</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Order &amp; Customer Notifications</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Streamlined Mobile Checkout</li>
+            </ul>
+            <a href="ecommerce-website.html"
+              class="mt-7 lg:mt-auto pt-2 inline-flex items-center gap-1.5 text-sm font-bold text-amber-400 hover:text-amber-300 transition">
+              Explore E-Commerce
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+
+          <!-- Maintenance -->
+          <article class="reveal card rounded-2xl p-7 flex flex-col" style="--d:180ms">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path
+                  d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold text-white tracking-tight">Website Maintenance &amp; Support</h3>
+            <p class="mt-3 text-sm text-zinc-400 leading-relaxed">Routine check-ups, backups, and prompt technical
+              support to keep your website fast, updated, and secure at all times. Complete peace of mind.</p>
+            <ul class="mt-5 space-y-2.5 text-sm text-zinc-300">
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Regular Security &amp; Speed Audits</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Content &amp; Asset Updates</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Automated Backup Routine</li>
+              <li class="flex items-start gap-2.5"><svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  viewBox="0 0 24 24">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Direct WhatsApp Priority Support</li>
+            </ul>
+            <a href="website-maintenance-support.html"
+              class="mt-7 lg:mt-auto pt-2 inline-flex items-center gap-1.5 text-sm font-bold text-amber-400 hover:text-amber-300 transition">
+              Explore Maintenance
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-2xl reveal">
+          <span
+            class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">PORTFOLIO</span>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">Featured <span
+              class="text-amber-400">projects.</span></h2>
+          <p class="mt-4 text-zinc-400 leading-relaxed">Each built and coded from scratch according to the specific
+            requirements of the brand.</p>
+        </div>
+
+        <div id="projects-grid" class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SEO -->
+    <section id="seo" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div
+          class="rounded-3xl border border-white/10 bg-zinc-900/60 backdrop-blur-sm p-6 sm:p-10 lg:p-14 grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
+          <!-- Left -->
+          <div>
+            <div class="reveal">
+              <span
+                class="inline-block rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">Technical
+                SEO &amp; Search Visibility</span>
+              <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">A Beautiful
+                Website Isn't Enough, It Needs to Be <span class="text-amber-400">Discoverable</span></h2>
+              <p class="mt-5 text-zinc-400 leading-relaxed">A professional design creates instant trust. But if your
+                prospective clients cannot find you on Google, your website never reaches its full potential. Through
+                structured semantic markup, heading hierarchy, Google Maps alignment, sitemaps, and core web vitals
+                optimization, I make sure the right clients find you.</p>
+            </div>
+
+            <div class="reveal mt-8 grid grid-cols-3 gap-3" style="--d:100ms">
+              <div class="rounded-2xl border border-white/10 bg-white/[.03] p-4">
+                <div class="text-lg font-extrabold text-white tracking-tight">Technical</div>
+                <div class="mt-0.5 text-xs text-zinc-400">SEO Foundation</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[.03] p-4">
+                <div class="text-lg font-extrabold text-white tracking-tight">Content</div>
+                <div class="mt-0.5 text-xs text-zinc-400">Search Intent</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[.03] p-4">
+                <div class="text-lg font-extrabold text-white tracking-tight">Analytics</div>
+                <div class="mt-0.5 text-xs text-zinc-400">Continuous Tracking</div>
+              </div>
+            </div>
+
+            <div class="reveal mt-8 flex flex-col sm:flex-row gap-3" style="--d:180ms">
+              <a href="#contact"
+                class="text-center rounded-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-6 py-3.5 transition shadow-lg shadow-amber-500/20">Get
+                an SEO-Ready Quote</a>
+              <a data-wa href="#" target="_blank" rel="noopener"
+                class="text-center rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-3.5 transition">Chat
+                on WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Right: Mockup Cards -->
+          <div class="reveal relative" style="--d:120ms">
+            <!-- SERP mockup -->
+            <div class="relative z-10 rounded-2xl bg-white shadow-2xl shadow-black/40 p-5 sm:p-6 pb-16 sm:mr-10">
+              <div
+                class="flex items-center gap-3 rounded-full border border-zinc-200 px-4 py-2.5 text-sm text-zinc-600">
+                <svg class="w-4 h-4 text-zinc-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3" />
+                </svg>
+                <span class="truncate">custom web design services</span>
+              </div>
+              <div class="mt-5 flex items-center gap-2.5">
+                <span
+                  class="grid place-items-center w-7 h-7 rounded-full bg-zinc-100 text-zinc-700 text-xs font-bold">B</span>
+                <div class="leading-tight">
+                  <div class="text-sm font-semibold text-zinc-800">Your Brand</div>
+                  <div class="text-xs text-emerald-700">www.yourbrand.com › web-design</div>
+                </div>
+              </div>
+              <div class="mt-2 text-lg sm:text-xl font-semibold text-blue-700 tracking-tight">Custom Web Design for Your
+                Business | Your Brand</div>
+              <p class="mt-1.5 text-sm text-zinc-600 leading-relaxed">Fast-loading, mobile-first, and Google-ready custom
+                coded web applications. Contact us today for a free discovery session.</p>
+              <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-blue-700">
+                <span>Services</span><span>Projects</span><span>Contact</span>
+              </div>
+            </div>
+
+            <!-- Growth chart -->
+            <div
+              class="relative z-20 -mt-12 sm:ml-10 rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl shadow-black/50 p-5 sm:p-6">
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-bold text-white tracking-tight">SEO Growth Phases</div>
+                <span
+                  class="rounded-full bg-emerald-400/10 text-emerald-300 text-xs font-bold px-2.5 py-1">Sample</span>
+              </div>
+              <div class="mt-5 grid grid-cols-4 gap-3 sm:gap-4 items-end h-36">
+                <div class="h-full flex items-end">
+                  <div class="bar w-full h-[30%] rounded-xl bg-gradient-to-t from-amber-600/70 to-amber-400/70"
+                    style="--d:0ms"></div>
+                </div>
+                <div class="h-full flex items-end">
+                  <div class="bar w-full h-[52%] rounded-xl bg-gradient-to-t from-amber-600/80 to-amber-400/80"
+                    style="--d:90ms"></div>
+                </div>
+                <div class="h-full flex items-end">
+                  <div class="bar w-full h-[76%] rounded-xl bg-gradient-to-t from-amber-500 to-amber-300"
+                    style="--d:180ms"></div>
+                </div>
+                <div class="h-full flex items-end">
+                  <div class="bar w-full h-full rounded-xl bg-gradient-to-t from-emerald-500 to-emerald-300"
+                    style="--d:270ms"></div>
+                </div>
+              </div>
+              <div
+                class="mt-3 grid grid-cols-4 gap-3 sm:gap-4 text-center text-[11px] sm:text-xs font-semibold text-zinc-400">
+                <span>Audit</span><span>Strategy</span><span>Launch</span><span>Scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-2xl reveal">
+          <span
+            class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">WORKFLOW</span>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">Live in four <span
+              class="text-amber-400">clear steps.</span></h2>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <article class="reveal card rounded-2xl p-6" style="--d:0ms">
+            <div class="text-4xl font-extrabold text-amber-400/90 tracking-tight">01</div>
+            <h3 class="mt-4 text-lg font-bold text-white tracking-tight">Discovery &amp; Scope</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">We define your target audience, business model, and
+              exact scope requirements.</p>
+          </article>
+          <article class="reveal card rounded-2xl p-6" style="--d:80ms">
+            <div class="text-4xl font-extrabold text-amber-400/90 tracking-tight">02</div>
+            <h3 class="mt-4 text-lg font-bold text-white tracking-tight">Design &amp; Approval</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">We draft the interface mockup tailored to your brand,
+              moving to code only after full approval.</p>
+          </article>
+          <article class="reveal card rounded-2xl p-6" style="--d:160ms">
+            <div class="text-4xl font-extrabold text-amber-400/90 tracking-tight">03</div>
+            <h3 class="mt-4 text-lg font-bold text-white tracking-tight">Clean Development</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">We code the approved prototype cleanly from the ground
+              up for speed and SEO.</p>
+          </article>
+          <article class="reveal card rounded-2xl p-6" style="--d:240ms">
+            <div class="text-4xl font-extrabold text-amber-400/90 tracking-tight">04</div>
+            <h3 class="mt-4 text-lg font-bold text-white tracking-tight">Launch &amp; Handover</h3>
+            <p class="mt-2 text-sm text-zinc-400 leading-relaxed">We deploy the platform live, submit sitemaps to
+              Google, and provide ongoing support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-24">
+      <div class="max-w-3xl mx-auto px-5">
+        <div class="text-center reveal">
+          <span
+            class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">FAQ</span>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">Frequently asked
+            <span class="text-amber-400">questions.</span></h2>
+        </div>
+
+        <div class="mt-10 space-y-3">
+          <div class="acc-item reveal card rounded-2xl" style="--d:0ms">
+            <button class="acc-btn w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              aria-expanded="false">
+              <span class="font-bold text-white tracking-tight">What is the estimated delivery time?</span>
+              <svg class="acc-icon shrink-0 w-5 h-5 text-amber-400" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="acc-panel">
+              <div>
+                <p class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Depending on project scope, a single-page
+                  portfolio or landing page takes roughly 5-7 business days, while multi-page corporate sites take 2-3
+                  weeks. A definitive timeline is confirmed before we start.</p>
+              </div>
+            </div>
+          </div>
+          <div class="acc-item reveal card rounded-2xl" style="--d:60ms">
+            <button class="acc-btn w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              aria-expanded="false">
+              <span class="font-bold text-white tracking-tight">Will I have a CMS panel to edit content myself?</span>
+              <svg class="acc-icon shrink-0 w-5 h-5 text-amber-400" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="acc-panel">
+              <div>
+                <p class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">For most businesses, static content rarely
+                  changes; having me handle quick updates is faster and cheaper than maintaining a slow, heavy dashboard.
+                  If frequent publishing is required, we can integrate a lightweight headless CMS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="acc-item reveal card rounded-2xl" style="--d:120ms">
+            <button class="acc-btn w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              aria-expanded="false">
+              <span class="font-bold text-white tracking-tight">What are the annual recurring costs?</span>
+              <svg class="acc-icon shrink-0 w-5 h-5 text-amber-400" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="acc-panel">
+              <div>
+                <p class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Zero plugin subscriptions or hidden licensing
+                  fees. The only recurring expense is your yearly domain name renewal and extremely affordable static
+                  hosting. Every expense is outlined clearly in the quote.</p>
+              </div>
+            </div>
+          </div>
+          <div class="acc-item reveal card rounded-2xl" style="--d:180ms">
+            <button class="acc-btn w-full flex items-center justify-between gap-4 text-left px-6 py-5"
+              aria-expanded="false">
+              <span class="font-bold text-white tracking-tight">Will the website work properly on mobile screens?</span>
+              <svg class="acc-icon shrink-0 w-5 h-5 text-amber-400" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="acc-panel">
+              <div>
+                <p class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Absolutely. Every layout is developed mobile-first
+                  and tested across phones, tablets, and desktops. Since most visitors browse from mobile devices, the
+                  entire architecture is built for quick thumb navigation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-2xl reveal">
+          <span
+            class="inline-block rounded-full bg-amber-400/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 tracking-wide">CONTACT</span>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">Let's talk about
+            <span class="text-amber-400">your project.</span></h2>
+        </div>
+
+        <div class="mt-12 grid lg:grid-cols-5 gap-5">
+          <!-- WhatsApp card -->
+          <div class="reveal lg:col-span-2 card rounded-2xl p-7 flex flex-col">
+            <div class="w-12 h-12 rounded-xl bg-emerald-400/10 text-emerald-400 grid place-items-center">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.1 6.5 6.5 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-2xl font-extrabold text-white tracking-tight">Skip the forms, <span
+                class="text-emerald-400">reach out directly.</span></h3>
+            <p class="mt-3 text-zinc-400 leading-relaxed">Tell me briefly about your business goals and what you need.
+              I usually reply within a couple of hours with a clear, non-binding proposal.</p>
+            <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Free
+                introductory consultation</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Fixed
+                pricing, no unexpected fees</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Quick
+                response 7 days a week</li>
+            </ul>
+            <a data-wa href="#" target="_blank" rel="noopener"
+              class="mt-7 lg:mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold px-6 py-3.5 transition">Message
+              on WhatsApp</a>
+          </div>
+
+          <!-- Form -->
+          <div class="reveal lg:col-span-3 card rounded-2xl p-7" style="--d:100ms">
+            <h3 class="text-xl font-extrabold text-white tracking-tight">Request a Quote</h3>
+            <p class="mt-1 text-sm text-zinc-400">Fill in the fields below and I'll get back to you via email.</p>
+
+            <form id="quote-form" action="https://formspree.io/f/FORM_ID" method="POST" class="mt-6 space-y-4"
+              novalidate>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-zinc-300 mb-1.5">Your Name</label>
+                  <input id="name" name="name" type="text" required placeholder="Full Name"
+                    class="field w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500" />
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-zinc-300 mb-1.5">Email Address</label>
+                  <input id="email" name="email" type="email" required placeholder="name@domain.com"
+                    class="field w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phone" class="block text-xs font-semibold text-zinc-300 mb-1.5">Phone Number
+                    (optional)</label>
+                  <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="16"
+                    placeholder="+90 5xx xxx xx xx"
+                    class="field w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500" />
+                </div>
+                <div>
+                  <label for="type" class="block text-xs font-semibold text-zinc-300 mb-1.5">Project Type</label>
+                  <select id="type" name="project_type" class="field w-full rounded-xl px-4 py-3 text-sm text-white">
+                    <option class="bg-zinc-900" value="Corporate Web Design">Corporate Web Design</option>
+                    <option class="bg-zinc-900" value="E-Commerce Website">E-Commerce Website</option>
+                    <option class="bg-zinc-900" value="Maintenance & Support">Maintenance &amp; Support</option>
+                    <option class="bg-zinc-900" value="SEO / Search Visibility">SEO / Search Visibility</option>
+                    <option class="bg-zinc-900" value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="message" class="block text-xs font-semibold text-zinc-300 mb-1.5">Your Project</label>
+                <textarea id="message" name="message" rows="4" required
+                  placeholder="Tell me briefly about your business goals and requirements..."
+                  class="field w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 resize-none"></textarea>
+              </div>
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" />
+
+              <button id="form-btn" type="submit"
+                class="w-full rounded-full bg-amber-400 hover:bg-amber-300 disabled:opacity-60 disabled:cursor-not-allowed text-zinc-950 font-bold px-6 py-3.5 transition">Send
+                Request</button>
+              <p id="form-status" role="status" aria-live="polite" class="text-sm min-h-[1.25rem]"></p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="mt-5 grid sm:grid-cols-3 gap-5">
+          <a data-phone-link href="#" class="reveal card rounded-2xl p-6 block" style="--d:0ms">
+            <div class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <path
+                  d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+              </svg>
+            </div>
+            <div class="mt-4 text-xs font-bold tracking-wide text-zinc-500">PHONE</div>
+            <div data-phone-text class="mt-1 text-lg sm:text-xl font-extrabold text-white tracking-tight">+90 552 817
+              3422</div>
+          </a>
+
+          <a data-mail-link href="#" class="reveal card rounded-2xl p-6 block" style="--d:80ms">
+            <div class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <path d="M3.5 7.5l8.5 6 8.5-6" />
+              </svg>
+            </div>
+            <div class="mt-4 text-xs font-bold tracking-wide text-zinc-500">EMAIL</div>
+            <div data-mail-text class="mt-1 text-lg sm:text-xl font-extrabold text-white tracking-tight break-all">
+              merhaba@pixelatolye.com</div>
+          </a>
+
+          <a data-ig-link href="#" target="_blank" rel="noopener" class="reveal card rounded-2xl p-6 block"
+            style="--d:160ms">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-zinc-950 grid place-items-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <div class="mt-4 text-xs font-bold tracking-wide text-zinc-500">INSTAGRAM</div>
+            <div class="mt-1 flex items-center justify-between gap-2">
+              <span data-ig-text class="text-lg sm:text-xl font-extrabold text-white tracking-tight">@pixelatolye</span>
+              <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M7 17L17 7M8 7h9v9" />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="reveal card rounded-2xl p-6 mt-5 flex items-center gap-4" style="--d:60ms">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-400/10 text-amber-400 grid place-items-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold tracking-wide text-zinc-500">LOCATION</div>
+            <div class="mt-1 text-lg sm:text-xl font-extrabold text-white tracking-tight">Istanbul, Turkey <span
+                class="text-zinc-400 font-semibold text-base sm:text-lg">(Worldwide &amp; On-Site Services)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-white/10 mt-10">
+    <div
+      class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+      <p>&copy; <span id="year"></span> Pixel Atölye. All rights reserved.</p>
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Footer menu">
+        <a href="#services" class="hover:text-white transition">Services</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#process" class="hover:text-white transition">Process</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

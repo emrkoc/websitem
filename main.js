@@ -282,3 +282,81 @@ if (phoneInput) {
     if (phoneInput.value.trim() === '0') phoneInput.value = '';
   });
 }
+
+/* ============ ÇİFT YÖNLÜ DİL DEĞİŞTİRME BUTONU ============ */
+const langLink = document.getElementById('lang-toggle-link');
+const langIndicator = document.getElementById('lang-indicator');
+const langTr = document.getElementById('lang-text-tr');
+const langEn = document.getElementById('lang-text-en');
+
+// Sayfanın en/ klasöründe olup olmadığını anla
+const isEnglishPage = window.location.pathname.includes('/en/');
+
+function resetLangSwitch() {
+  if (!langIndicator || !langTr || !langEn) return;
+
+  if (isEnglishPage) {
+    // İngilizce sayfa: EN aktif (sağda)
+    langIndicator.classList.remove('translate-x-0');
+    langIndicator.classList.add('translate-x-9');
+
+    langTr.classList.remove('text-zinc-950', 'font-black');
+    langTr.classList.add('text-zinc-400', 'font-bold');
+
+    langEn.classList.remove('text-zinc-400', 'font-bold');
+    langEn.classList.add('text-zinc-950', 'font-black');
+  } else {
+    // Türkçe sayfa: TR aktif (solda)
+    langIndicator.classList.remove('translate-x-9');
+    langIndicator.classList.add('translate-x-0');
+
+    langTr.classList.add('text-zinc-950', 'font-black');
+    langTr.classList.remove('text-zinc-400', 'font-bold');
+
+    langEn.classList.add('text-zinc-400', 'font-bold');
+    langEn.classList.remove('text-zinc-950', 'font-black');
+  }
+}
+
+if (langLink && langIndicator) {
+  langLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetUrl = langLink.getAttribute('href');
+
+    if (isEnglishPage) {
+      // İngilizce sayfadayken TR'ye dönmek için sola kaydır
+      langIndicator.classList.remove('translate-x-9');
+      langIndicator.classList.add('translate-x-0');
+
+      if (langTr && langEn) {
+        langEn.classList.remove('text-zinc-950', 'font-black');
+        langEn.classList.add('text-zinc-400', 'font-bold');
+
+        langTr.classList.remove('text-zinc-400', 'font-bold');
+        langTr.classList.add('text-zinc-950', 'font-black');
+      }
+    } else {
+      // Türkçe sayfadayken EN'ye geçmek için sağa kaydır
+      langIndicator.classList.remove('translate-x-0');
+      langIndicator.classList.add('translate-x-9');
+
+      if (langTr && langEn) {
+        langTr.classList.remove('text-zinc-950', 'font-black');
+        langTr.classList.add('text-zinc-400', 'font-bold');
+
+        langEn.classList.remove('text-zinc-400', 'font-bold');
+        langEn.classList.add('text-zinc-950', 'font-black');
+      }
+    }
+
+    // Animasyonu hissettirip hedef URL'ye git
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 180);
+  });
+}
+
+// BFCache (Geri/İleri tuşları) durumunda doğru dili ekrana sıfırla
+window.addEventListener('pageshow', () => {
+  resetLangSwitch();
+});
