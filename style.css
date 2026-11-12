@@ -210,3 +210,39 @@ cite {
     transform: none;
   }
 }
+
+/* ============ KAYAN KUTU ŞERİDİ (TECH MARQUEE) ============ */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+@keyframes marqueeSlide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.marquee-group {
+  animation: marqueeSlide 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+.tech-box:hover svg,
+.tech-box:hover span {
+  color: #fbbf24;
+  transition: color 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-group {
+    animation: none;
+  }
+}
